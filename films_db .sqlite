@@ -1,0 +1,1102 @@
+--
+-- File generated with SQLiteStudio v3.3.3 on пн дек. 19 19:25:16 2022
+--
+-- Text encoding used: UTF-8
+--
+PRAGMA foreign_keys = off;
+BEGIN TRANSACTION;
+
+-- Table: products
+CREATE TABLE products (
+    id    INTEGER NOT NULL
+                  PRIMARY KEY AUTOINCREMENT
+                  UNIQUE,
+    title TEXT
+);
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         1,
+                         'овощи'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         2,
+                         'зелень'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         3,
+                         'мясо'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         4,
+                         'напитки'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         5,
+                         'фрукты'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         6,
+                         'ягоды'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         7,
+                         'сыры'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         8,
+                         'выпечка'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         9,
+                         'молочное'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         10,
+                         'биография'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         11,
+                         'боевик'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         13,
+                         'приключения'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         15,
+                         'война'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         16,
+                         'семейный'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         17,
+                         'триллер'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         18,
+                         'фэнтези'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         19,
+                         'вестерн'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         20,
+                         'мистика'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         21,
+                         'короткометражный'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         22,
+                         'мюзикл'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         23,
+                         'исторический'
+                     );
+
+INSERT INTO products (
+                         id,
+                         title
+                     )
+                     VALUES (
+                         24,
+                         'нуар'
+                     );
+
+
+-- Table: shops
+CREATE TABLE shops (
+    id    INTEGER NOT NULL
+                  PRIMARY KEY AUTOINCREMENT
+                  UNIQUE,
+    name  STRING,
+    price INTEGER,
+    type  INTEGER REFERENCES products (id),
+    CONSTRAINT products_title_id_fk FOREIGN KEY (
+        type
+    )
+    REFERENCES products (id) 
+);
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      1,
+                      'морковь',
+                      34,
+                      1
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      2,
+                      'помидоры',
+                      32,
+                      1
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      3,
+                      'орурцы',
+                      41,
+                      1
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      4,
+                      'перец',
+                      36,
+                      1
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      5,
+                      'картошка',
+                      43,
+                      1
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      6,
+                      'редис',
+                      50,
+                      1
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      7,
+                      'свекла',
+                      31,
+                      1
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      8,
+                      'баклажаны',
+                      29,
+                      1
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      9,
+                      'кабачки',
+                      33,
+                      1
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      10,
+                      'петрушка',
+                      36,
+                      2
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      11,
+                      'укроп',
+                      40,
+                      2
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      12,
+                      'базилик',
+                      37,
+                      2
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      13,
+                      'мята',
+                      52,
+                      2
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      14,
+                      'говядина',
+                      100,
+                      3
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      15,
+                      'баранина',
+                      134,
+                      3
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      16,
+                      'свинина',
+                      78,
+                      3
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      17,
+                      'курица',
+                      70,
+                      3
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      18,
+                      'кролик',
+                      81,
+                      3
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      19,
+                      'вода',
+                      22,
+                      4
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      20,
+                      'кул кола',
+                      46,
+                      4
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      21,
+                      'стрит',
+                      57,
+                      4
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      22,
+                      'фанси',
+                      43,
+                      4
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      23,
+                      'фьюзти',
+                      78,
+                      4
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      24,
+                      'квас',
+                      68,
+                      4
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      25,
+                      'морс',
+                      56,
+                      4
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      26,
+                      'вода газированная',
+                      32,
+                      4
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      27,
+                      'мандарины',
+                      64,
+                      5
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      28,
+                      'апельсины',
+                      48,
+                      5
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      29,
+                      'яблоки',
+                      37,
+                      5
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      30,
+                      'бананы',
+                      65,
+                      5
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      31,
+                      'груши',
+                      49,
+                      5
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      32,
+                      'вишни',
+                      77,
+                      6
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      33,
+                      'малина',
+                      99,
+                      6
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      34,
+                      'виноград',
+                      54,
+                      6
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      35,
+                      'клубника',
+                      67,
+                      6
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      36,
+                      'черешня',
+                      76,
+                      6
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      37,
+                      'арбуз',
+                      120,
+                      6
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      38,
+                      'клюква',
+                      45,
+                      6
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      39,
+                      'смородина',
+                      50,
+                      6
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      40,
+                      'брусника',
+                      72,
+                      6
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      41,
+                      'ежевика',
+                      83,
+                      6
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      42,
+                      'голубика',
+                      74,
+                      6
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      43,
+                      'земляника',
+                      58,
+                      6
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      44,
+                      'пармезан',
+                      101,
+                      7
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      45,
+                      'бри',
+                      203,
+                      7
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      46,
+                      'сулугуни',
+                      189,
+                      7
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      47,
+                      'моцарелла',
+                      95,
+                      7
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      48,
+                      'сливочный сыр',
+                      174,
+                      7
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      49,
+                      'дорблю',
+                      153,
+                      7
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      50,
+                      'хлеб',
+                      25,
+                      8
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      51,
+                      'пирог с капустой',
+                      356,
+                      8
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      52,
+                      'приог с брусникой',
+                      274,
+                      8
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      53,
+                      'пирожок с картошой',
+                      78,
+                      8
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      54,
+                      'булка с сыром',
+                      69,
+                      8
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      55,
+                      'булка с корицей',
+                      74,
+                      8
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      56,
+                      'блины',
+                      89,
+                      8
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      57,
+                      'кекс с изюмом',
+                      99,
+                      8
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      58,
+                      'торт',
+                      563,
+                      8
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      59,
+                      'лаваш',
+                      15,
+                      8
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      60,
+                      'лепешка',
+                      34,
+                      8
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      61,
+                      'кулич',
+                      259,
+                      8
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      62,
+                      'молоко',
+                      105,
+                      9
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      63,
+                      'кефир',
+                      141,
+                      9
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      64,
+                      'ряженка',
+                      136,
+                      9
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      65,
+                      'йогурт',
+                      69,
+                      9
+                  );
+
+INSERT INTO shops (
+                      id,
+                      name,
+                      price,
+                      type
+                  )
+                  VALUES (
+                      66,
+                      'простокваша',
+                      99,
+                      9
+                  );
+
+
+-- Index: products_id_uindex
+CREATE UNIQUE INDEX products_id_uindex ON products (
+    id
+);
+
+
+-- Index: types_id_uindex
+CREATE UNIQUE INDEX types_id_uindex ON shops (
+    id
+);
+
+
+COMMIT TRANSACTION;
+PRAGMA foreign_keys = on;
